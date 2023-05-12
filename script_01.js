@@ -33,7 +33,7 @@ function getNum() {
 
 function getOp() {
 	
-	return getOp
+	return getOp(prompt("Operator?"))
 
 }	
 // Auswahl Rechenart
