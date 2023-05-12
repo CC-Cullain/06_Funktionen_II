@@ -17,41 +17,53 @@
 const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
 const ERROR_STR_GEN = "Irgendetwas ging schief!"
 
+startApp()
+function startApp() {
+	output(calculator(getNum(), getNum(),getOp()));
+}
+
 // Dateieingabe
 
-function input(a,b) {
+function getNum() {
+		
+			
+	return parseInt(prompt("Zahl?"));
+
+}
+
+function getOp() {
 	
+	return getOp
 
-}
-
-// Dateikonvertierung
-
-function convert(a,b) {
-
-	return parseInt(a), parseInt(b);
-}
-
+}	
 // Auswahl Rechenart
 
-function calculator(params) {
+// agreement : "+","-","*",":","/"
+// output(calculator(3,2,"+"));
+// output(calculator(3,2,"-"));
+// output(calculator(3,2,"*"));
+// output(calculator(3,0,"/"));
+// output(calculator(3,2,"#?!"));
+
+function calculator(a,b,op) {
 	
-	switch (key) {
+	switch (op) {
 		case "+":
 			
-			return add;
+			return add(a,b);
 		
 		case "-":
 			
-			return subtract;	
+			return subtract(a,b);	
 		
 		case "*":
 			
-			return multiply;
+			return multiply(a,b);
 		
 		case "/":
 		case ":":	
 			
-			return divide;
+			return divide(a,b);
 		
 		default:
 			return ERROR_STR_GEN;
