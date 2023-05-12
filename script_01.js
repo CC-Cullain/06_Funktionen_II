@@ -11,6 +11,12 @@
 4. Ausgabe in Konsole : 
 */
 
+// Variablen und Konstanten
+
+// Konstanten
+const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
+const ERROR_STR_GEN = "Irgendetwas ging schief!"
+
 // Dateieingabe
 
 function input(a,b) {
@@ -27,8 +33,29 @@ function convert(a,b) {
 
 // Auswahl Rechenart
 
-function name(params) {
+function calculator(params) {
 	
+	switch (key) {
+		case "+":
+			
+			return add;
+		
+		case "-":
+			
+			return subtract;	
+		
+		case "*":
+			
+			return multiply;
+		
+		case "/":
+		case ":":	
+			
+			return divide;
+		
+		default:
+			return ERROR_STR_GEN;
+	}
 }
 
 //  module: addition a+b
@@ -57,10 +84,18 @@ function multiply(a,b) {
 
 //  module: division a+b
 // output(div(6,2));
+// output(divide(4,2));
+// output(divide(3,2));
+// output(divide(3,-2));
+// output(divide(3,0));
 
 function divide(a,b) {
-	
-	return a / b;
+
+if (b == 0) {
+	return ERROR_STR_DIV
+}
+
+return a/b
 }
 
 // module: output | test:
